@@ -1,0 +1,64 @@
+{
+  "name": "pontoon",
+  "version": "1.0.0",
+  "description": "A web app designed to keep you afloat during the covid19 crisis",
+  "main": "index.js",
+  "scripts": {
+    "client": "webpack-dev-server --hot --inline",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "webpack --watch",
+    "dev:server": "nodemon server",
+    "start": "run-s build server",
+    "build": "webpack",
+    "server": "node server",
+    "test": "jest --watchAll"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pontoon-hackthecrisisnz/pontoon.git"
+  },
+  "keywords": [],
+  "author": "Pontoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pontoon-hackthecrisisnz/pontoon/issues"
+  },
+  "homepage": "https://github.com/pontoon-hackthecrisisnz/pontoon#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "jest": "^24.7.1",
+    "knex": "^0.20.15",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sqlite3": "^4.1.1",
+    "superagent": "^5.2.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
