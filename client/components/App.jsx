@@ -1,7 +1,12 @@
 import React from 'react';
+import Home from './Home';
 
 const App = () => {
-  return <h1>Welcome to the pontoon!</h1>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 };
 
 export default App;
