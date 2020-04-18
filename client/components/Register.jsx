@@ -16,7 +16,7 @@ class Register extends React.Component {
     }
 
     componentDidMount () {
-        this.props.dispatch(returnJob())
+        this.props.dispatch(returnJob(this.state.region))
     }
 
     handleChange = (e) => {
@@ -28,6 +28,7 @@ class Register extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.dispatch(addUser(this.state))
+        this.props.dispatch(returnJob(this.state.region))
     }
 
     render() {

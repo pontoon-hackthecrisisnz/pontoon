@@ -30,11 +30,11 @@ export const recievedErr = (err) => {
 
 //api export call to return the user for the front end.
 
-export function returnJob() {
+export function returnJob(town) {
   return (dispatch) => {
     dispatch(getJob());
     return request
-      .get(URL)
+      .get(URL + '/?town=' + town)
       .then((res) => {
         return res.body;
       })

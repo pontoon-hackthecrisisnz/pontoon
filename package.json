@@ -39,7 +39,9 @@
     "url": "https://github.com/pontoon-hackthecrisisnz/pontoon/issues"
   },
   "homepage": "https://github.com/pontoon-hackthecrisisnz/pontoon#readme",
-  "dependencies": {},
+  "dependencies": {
+    "pg": "^8.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
