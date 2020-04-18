@@ -11,6 +11,16 @@ const getJobs = (town, source, db = connection) => {
     });
 };
 
+const getJobsNoSource = (town, db = connection) => {
+  console.log('this is the param I got: ' + town)
+  return db('main')
+  .select('*')
+  .where(
+    {
+      ad_region: town
+    });
+};
+
 module.exports = {
   getJobs,
 };

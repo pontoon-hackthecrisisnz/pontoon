@@ -33,6 +33,9 @@ export const recievedErr = (err) => {
 export function returnJob(town, source) {
   return (dispatch) => {
     dispatch(getJob());
+
+
+
     return request
       .get(URL + '/?town=' + town + '&source=' + source)
       .then((res) => {
