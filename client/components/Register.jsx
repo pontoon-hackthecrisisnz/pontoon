@@ -7,11 +7,21 @@ class Register extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: '',
-            region: '',
+            //name: '',
+            //region: '',
             town: '',
             lastJob: '',
-            minSalary: ''
+            //minSalary: ''
+        }
+    }
+
+    validate = (e) => {
+        if (this.state.town.length < 1) {
+            alert('No fields can be empty.')
+        } else if (this.state.lastJob.length < 1) {
+            alert('No fields can be empty.')
+        } else {
+            this.handleSubmit(e)
         }
     }
 
@@ -33,12 +43,12 @@ class Register extends React.Component {
             <div className="register">
 
                 <form>
-                    <input type='text' placeholder='name' name='name' onChange={this.handleChange} />
-                    <input type='text' placeholder='region' name='region' onChange={this.handleChange} />
+                    {/* <input type='text' placeholder='name' name='name' onChange={this.handleChange} /> */}
+                    {/* <input type='text' placeholder='region' name='region' onChange={this.handleChange} /> */}
                     <input type='text' placeholder='town' name='town' onChange={this.handleChange} />
                     <input type='text' placeholder='Latest Job' name='lastJob' onChange={this.handleChange} />
-                    <input type='text' placeholder='minimum salary' name='minSalary' onChange={this.handleChange} />
-                    <input  type="submit" onClick={this.handleSubmit} />
+                    {/* <input type='text' placeholder='minimum salary' name='minSalary' onChange={this.handleChange} /> */}
+                    <input  type="submit" onClick={this.validate} />
                 </form>
             </div>
         )
