@@ -4,11 +4,10 @@ const db = require('../db/jobs');
 
 router.use(express.json())
 
-router.get('/jobs', (req, res) => {
+router.get('/', (req, res) => {
   db.getJobs()
-    .then(res => {
-      console.log('you have reached the router')
-      res.json(res);
+    .then(jobs => {
+      res.json(jobs);
     })
     .catch((err) => {
       console.error(err);

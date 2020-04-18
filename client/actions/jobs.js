@@ -4,7 +4,7 @@ export const GET_JOB = 'GET_JOB';
 export const RECEIVED_JOB = 'RECEIVED_JOB';
 export const ERROR = 'ERROR';
 
-const URL = '';
+const URL = '/jobs';
 
 export const getJob = () => {
   return {

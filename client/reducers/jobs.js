@@ -1,8 +1,6 @@
 import { GET_JOB, RECEIVED_JOB, ERROR } from '../actions/jobs';
 
-const initialState = {
-  test: 'She works hard for the money'
-}
+const initialState = {}
 
 const jobs = (state = initialState, action) => {
   switch (action.type) {
