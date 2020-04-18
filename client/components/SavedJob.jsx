@@ -12,7 +12,7 @@ class SavedJob extends React.Component {
 
     render() {
 
-        {console.log('ho' + this.props.savedList)}
+        //{console.log('ho' + this.props.savedList)}
 
         return(
             <React.Fragment>
