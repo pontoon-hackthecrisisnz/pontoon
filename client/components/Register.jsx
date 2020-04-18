@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { returnJob } from '../actions/jobs'
 import { addUser } from '../actions/user'
+import { Link } from 'react-router-dom'
+import Job from './Job'
+
 
 class Register extends React.Component {
     constructor(props) {
@@ -12,12 +15,12 @@ class Register extends React.Component {
             town: '',
             lastJob: '',
             //minSalary: ''
-            cardShowing: false
+            isJobSeen: false
         }
     }
 
     showCard = () => {
-        this.setState({cardShowing: true})
+        this.setState({isJobSeen: true})
     }
 
     validate = (e) => {
@@ -41,21 +44,26 @@ class Register extends React.Component {
         e.preventDefault();
         this.props.dispatch(addUser(this.state))
         this.props.dispatch(returnJob(this.state.town, this.state.lastJob))
+        
     }
 
     render() {
         return(
+            <React.Fragment>
             <div className="register">
 
                 <form>
-                    {/* <input type='text' placeholder='name' name='name' onChange={this.handleChange} /> */}
-                    {/* <input type='text' placeholder='region' name='region' onChange={this.handleChange} /> */}
                     <input type='text' placeholder='Region' name='town' onChange={this.handleChange} />
                     <input type='text' placeholder='Latest Job' name='lastJob' onChange={this.handleChange} />
-                    {/* <input type='text' placeholder='minimum salary' name='minSalary' onChange={this.handleChange} /> */}
-                    <input  type="submit" onClick={this.validate} />
+                
+                    <Link to='/searching'>
+                        <input  type="submit" onClick={this.validate} />
+                    </Link>
                 </form>
             </div>
+            <Job />
+            </React.Fragment>
+
         )
     }
 }

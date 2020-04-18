@@ -11,10 +11,11 @@ const App = () => {
     <React.Fragment>
       <Router>
         <Route path='/' component={Navigation}/>
+        <Route path='/register' component={Register}/>
         <Route exact path='/' component={Home}/>
+        <Route path='/searching' component={Job} />
       </Router>
-      <Register />
-      <Job />
+
       {/* <SavedJob /> */}
     </React.Fragment>
   );
