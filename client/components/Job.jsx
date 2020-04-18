@@ -7,7 +7,7 @@ class Job extends React.Component {
         super(props)
         this.state = {
             currentJob: 1,
-            listOpen: false
+            listOpen: false,
         }
     }
 
@@ -36,43 +36,49 @@ class Job extends React.Component {
 
     render() {
         return(
-            <div className="jobCard">
-                     
-                {this.props.jobs.map((job, i) => {
-                        if (i == this.state.currentJob) {
-                            
-                            return (
-                                <React.Fragment key={i}>
-                                    <div  className="jobInfo">
-                                        <h3> {job.ad_title} </h3>
-                                        <h4> {job.company} </h4>
-                                        <h4> {job.contract_type} </h4>
-                                        <p> {job.ad_description} </p>
-                                        <p> {job.ad_region} </p>
-                                        <p> {job.town} </p>
-                                    </div>
+            <React.Fragment>
+            <div className="jobCardContainer">
+                
+                        
+                    {this.props.jobs.map((job, i) => {
+                            if (i == this.state.currentJob) {
+                                
+                                return (
+                                    <React.Fragment key={i}>
+                                        <div className="jobCard">
+                                            <div className="jobInfo">
+                                                <h3> {job.ad_title} </h3>
+                                                <p className='boldText'> {job.company} </p>
+                                                <p className='boldText'> {job.contract_type} </p>
+                                                <p> {job.ad_description} </p>
+                                                <p> {job.ad_region} </p>
+                                                <p> {job.town} </p>
+                                            </div>
 
-                                    <div>
-                                        <button onClick={() => this.likeJob(job)}> ✓ </button>
-                                        <button onClick={this.handleClick}> X </button>
-                                    </div>
-
-                                </React.Fragment>
-                            )
-                        }
-                    })}
+                                            <div className='buttonWrapper'>
+                                                <div className='swipeButton yes' onClick={() => this.likeJob(job)}> ✓ </div>
+                                                <div className='swipeButton no' onClick={this.handleClick}> ✘ </div>
+                                            </div>
+                                        </div>
+                                    </React.Fragment>
+                                )
+                            } else {
+                                return null
+                            } 
+                        })}
+    
+                </div>
 
                     { this.state.listOpen ? 
                         <div>
                             <button onClick={this.toggleSavedList}> Close Prospects </button>
                             <div className="SavedJobs">
                                 {this.props.savedList.map( savedJob => {
-                                    return (<li> You liked: {savedJob.ad_title} </li>)
+                                    return (<li> <a href={savedJob.link}> {savedJob.ad_title} from {savedJob.company ? savedJob.company : 'an unlisted company.' } </a> </li>)
                                 })}
                             </div> 
                     </div> : <button onClick={this.toggleSavedList}> View Prospects </button>} 
-            </div>
-        )
+                </React.Fragment>        )
     }
 }
 

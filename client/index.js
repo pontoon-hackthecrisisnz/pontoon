@@ -15,7 +15,9 @@ const store = createStore(reducers, composeEnhancers(
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <App />
+      <div className='main-container'>
+        <App />
+      </div>
     </Provider>,
     document.getElementById('app')
   )
