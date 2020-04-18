@@ -15,7 +15,7 @@ const App = () => {
       </Router>
       <Register />
       <Job />
-      <SavedJob />
+      {/* <SavedJob /> */}
     </React.Fragment>
   );
 };

@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   background-color: whitesmoke;
@@ -117,24 +118,100 @@ collapse {
   color: black;
 }
 
+
 /*
 
-Start of Seb's CSS
+Start of Ethans CSS
 
 */
 
-.prospects {
-  background-color: rgb(82, 82, 82);
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
-  align-content: center;
-  margin: auto 0;
-  padding: 10%;
+.register {
+  background-color: #2d3436;
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
 }
 
-/* 
+.jobCardContainer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+}
 
-End of Seb's CSS
+.jobCard {
+  width: 35%;
+
+  padding: 20px;
+
+  background-color: #2d3436;
+
+  color: #f2f2f2;
+  text-align: center;
+
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.boldText {
+  font-style: italic ;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.swipeButton {
+  height: 80px;
+  line-height: 80px;  
+  width: 80px;  
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 9px #999;
+}
+
+.yes {
+  background-color: #55efc4;
+  margin-right: 10px;
+}
+
+.yes:hover {
+  background-color: #00b894;
+}
+
+.yes:active {
+  background-color: #00b894;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.no {
+  background-color: #ff7675;
+  margin-left: 10px;
+}
+
+.no:hover {
+  background-color: #d63031;
+}
+
+.no:active {
+  background-color: #d63031;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+/*
+
+End of Ethans CSS
 
 */

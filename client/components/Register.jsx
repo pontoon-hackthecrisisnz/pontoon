@@ -12,7 +12,12 @@ class Register extends React.Component {
             town: '',
             lastJob: '',
             //minSalary: ''
+            cardShowing: false
         }
+    }
+
+    showCard = () => {
+        this.setState({cardShowing: true})
     }
 
     validate = (e) => {
@@ -45,7 +50,7 @@ class Register extends React.Component {
                 <form>
                     {/* <input type='text' placeholder='name' name='name' onChange={this.handleChange} /> */}
                     {/* <input type='text' placeholder='region' name='region' onChange={this.handleChange} /> */}
-                    <input type='text' placeholder='town' name='town' onChange={this.handleChange} />
+                    <input type='text' placeholder='Region' name='town' onChange={this.handleChange} />
                     <input type='text' placeholder='Latest Job' name='lastJob' onChange={this.handleChange} />
                     {/* <input type='text' placeholder='minimum salary' name='minSalary' onChange={this.handleChange} /> */}
                     <input  type="submit" onClick={this.validate} />
