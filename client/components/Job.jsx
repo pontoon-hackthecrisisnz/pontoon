@@ -6,7 +6,8 @@ class Job extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentJob: 1
+            currentJob: 1,
+            listOpen: false
         }
     }
 
@@ -17,24 +18,37 @@ class Job extends React.Component {
     }
 
     likeJob = (job) => {
-        console.log('dispatching:' + job.title)
+        console.log('dispatching:' + job.ad_title)
         this.props.dispatch(addLikedJob(job))
         this.handleClick()
+    }
+
+    toggleSavedList = () => {
+        console.log('toggle')
+        if (this.state.listOpen == false) {
+            this.setState({listOpen: true})
+        } else if (this.state.listOpen == true) {
+            this.setState({listOpen: false})
+        } else {
+            console.log("You found the hidden dev message. Message Sebastian Kloogh on slack for $300!")
+        }
     }
 
     render() {
         return(
             <div className="jobCard">
-
-                    {this.props.jobs.map((job, i) => {
-                        if (job.id == this.state.currentJob) {
+                     
+                {this.props.jobs.map((job, i) => {
+                        if (i == this.state.currentJob) {
                             
                             return (
                                 <React.Fragment key={i}>
                                     <div  className="jobInfo">
-                                        <h3> {job.title} </h3>
-                                        <p> {job.description} </p>
-                                        <p> {job.region} </p>
+                                        <h3> {job.ad_title} </h3>
+                                        <h4> {job.company} </h4>
+                                        <h4> {job.contract_type} </h4>
+                                        <p> {job.ad_description} </p>
+                                        <p> {job.ad_region} </p>
                                         <p> {job.town} </p>
                                     </div>
 
@@ -42,13 +56,21 @@ class Job extends React.Component {
                                         <button onClick={() => this.likeJob(job)}> ✓ </button>
                                         <button onClick={this.handleClick}> X </button>
                                     </div>
-                                </React.Fragment>
 
+                                </React.Fragment>
                             )
                         }
-                    })} 
+                    })}
 
-
+                    { this.state.listOpen ? 
+                        <div>
+                            <button onClick={this.toggleSavedList}> Close Prospects </button>
+                            <div className="SavedJobs">
+                                {this.props.savedList.map( savedJob => {
+                                    return (<li> You liked: {savedJob.ad_title} </li>)
+                                })}
+                            </div> 
+                    </div> : <button onClick={this.toggleSavedList}> View Prospects </button>} 
             </div>
         )
     }
@@ -64,3 +86,8 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps)(Job)
 
+/*
+
+
+
+*/

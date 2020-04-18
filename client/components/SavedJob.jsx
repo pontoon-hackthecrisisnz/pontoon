@@ -6,21 +6,21 @@ class SavedJob extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            count: 1
+            count: 1,
+            lookingAtJobs: false
         }
     }
 
     render() {
 
-        {console.log('ho' + this.props.savedList)}
+        {console.log('this should be reaching a saved list: ' + this.props.savedList)}
 
         return(
             <React.Fragment>
-                <p> Under me is where the thing will go. </p>
                 <div className="SavedJobs">
-                    {this.props.savedList.map( savedJobs => {
+                    {this.props.savedList.map( savedJob => {
                         
-                        return(<li> You liked: {savedJobs.title} </li>)
+                        return (<li> You liked: {savedJob.ad_title} </li>)
                     })}
                 </div>
             </React.Fragment>
