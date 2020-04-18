@@ -29,14 +29,14 @@ const Navigation = () => {
             <NavItem>
               <Link to="/contact" style={{ textDecoration: 'none' }}>
                 <Button color="" className="">
-                  <h4>CONTACT</h4>
+                  <h4>Contact</h4>
                 </Button>
               </Link>
             </NavItem>
             <NavItem>
               <Link to="/about" style={{ textDecoration: 'none' }}>
                 <Button color="" className="">
-                  <h4>ABOUT</h4>
+                  <h4>About</h4>
                 </Button>
               </Link>
             </NavItem>

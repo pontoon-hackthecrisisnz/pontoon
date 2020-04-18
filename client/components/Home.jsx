@@ -1,7 +1,7 @@
 import React from 'react';
 import BackgroundImage from './BackgroundImage';
 import Header from './Header';
-import { Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -9,9 +9,7 @@ const Home = () => {
       <BackgroundImage />
       <Header />
       <div className="register-buttons">
-        <Button className="button" to="/Register/Owner">
-          Job Finder
-        </Button>
+        <Link  style={{textDecoration: 'none'}}className="button" to='/job'>Find a Job</Link>
       </div>
     </>
   );

@@ -94,6 +94,7 @@ collapse {
 }
 
 .button {
+  justify-content: space-around;
   width: 30%;
   min-width: 150px;
   min-height: 60px;
@@ -101,14 +102,14 @@ collapse {
   border: none;
   color: white;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 20px;
   height: auto;
-  margin: 5%;
+  margin: 1%;
   cursor: pointer;
   transition-duration: 0.3s;
   border-radius: 10px;
+  padding: 20px;
 }
 
 .button:hover {
