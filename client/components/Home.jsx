@@ -1,10 +1,12 @@
 import React from 'react'
+import BackgroundImage from './BackgroundImage'
+import Header from './Header'
 
 const Home = () => {
   return (
     <>
-      <h1>PONTOON</h1>
-      <h3>Keeping you afloat :)</h3>
+    <BackgroundImage/>
+    <Header/>
     </>
   )
 }
