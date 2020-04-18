@@ -33,7 +33,7 @@ class Register extends React.Component {
     render() {
         return(
             <div className="register">
-                <h1>{this.props.payload.test}</h1>
+
                 <form>
                     <input type='text' placeholder='name' name='name' onChange={this.handleChange} />
                     <input type='text' placeholder='region' name='region' onChange={this.handleChange} />
@@ -49,7 +49,7 @@ class Register extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        payload: state.jobs
+        jobs: state.jobs
     }
 }
 
