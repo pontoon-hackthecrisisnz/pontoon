@@ -8,9 +8,9 @@ const Home = () => {
     <>
       <BackgroundImage />
       <Header />
-      <div className="register-buttons">
+      {/* <div className="register-buttons">
         <Link  style={{textDecoration: 'none'}}className="button" to='/job'>Find a Job</Link>
-      </div>
+      </div> */}
     </>
   );
 };

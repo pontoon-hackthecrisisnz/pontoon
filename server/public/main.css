@@ -160,6 +160,12 @@ Start of Ethans CSS
   font-style: italic ;
 }
 
+@media (min-width: 500px) {
+  .boldText {
+    font-style: none;
+  }
+}
+
 .buttonWrapper {
   display: flex;
   justify-content: center;
