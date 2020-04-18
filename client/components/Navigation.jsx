@@ -20,7 +20,7 @@ const Navigation = () => {
       <Navbar className="nav" light expand="md">
         <NavbarBrand>
           <Link to="/">
-            <img className="logo" src="/images/image.png" alt="" />
+            <img className="logo" src="/images/Pontoon.png" alt="" />
           </Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
