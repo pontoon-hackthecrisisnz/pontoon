@@ -3,11 +3,14 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'pg',
     connection: {
-      filename: './dev.sqlite3'
-    },
-    useNullAsDefault: true
+        host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
+        user : 'pontoon',
+        password : '8Kf8CWDvU8Gwf9z',
+        database : 'pontoon'
+    }
+    // useNullAsDefault: true
   },
 
   staging: {

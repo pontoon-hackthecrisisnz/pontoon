@@ -5,8 +5,10 @@ const db = require('../db/jobs');
 router.use(express.json())
 
 router.get('/', (req, res) => {
-  db.getJobs()
+  console.log('reaching back end with ' + req.query.town)
+  db.getJobs(req.query.town)
     .then(jobs => {
+      console.log(jobs)
       res.json(jobs);
     })
     .catch((err) => {
