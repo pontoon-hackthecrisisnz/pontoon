@@ -5,6 +5,8 @@ export const RECEIVED_JOB = 'RECEIVED_JOB';
 export const ERROR = 'ERROR';
 
 const URL = '/jobs';
+const likedJobs = []
+const dislikedJobs = []
 
 export const getJob = () => {
   return {
