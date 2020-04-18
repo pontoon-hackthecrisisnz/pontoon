@@ -1,18 +1,19 @@
-// import SAVE_USER_INFORMATION from '../actions/jobs'
+import { ADD_USER, addUser } from '../actions/user';
 
-// const initialState = {
-//     test: "She works hard for the money"
-// }
+const initialState = {}
 
-// const users = (state = initialState, action) => {
-//   switch (action.type) {
+const user = (state = initialState, action) => {
+    switch (action.type) {
+        
+        case ADD_USER:
+            return action.user;
 
-//     case SAVE_USER_INFORMATION:
-//         return action.userinfo
+        default:
+            return state;
+    }
 
-//     default:
-//       return state
-//   }
-// }
+}
 
-// export default users
+
+
+export default user

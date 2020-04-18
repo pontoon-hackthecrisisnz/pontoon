@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { returnJob } from '../actions/jobs'
+import { addUser } from '../actions/user'
 
 class Register extends React.Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class Register extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submit working as intended.')
+        this.props.dispatch(addUser(this.state))
     }
 
     render() {
