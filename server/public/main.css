@@ -215,3 +215,13 @@ Start of Ethans CSS
 End of Ethans CSS
 
 */
+
+.prospects {
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin: auto 0;
+  padding: 10%;
+}
