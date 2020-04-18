@@ -8,6 +8,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
 } from 'reactstrap';
 
 const Navigation = () => {
@@ -23,19 +24,19 @@ const Navigation = () => {
           </Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse isOpen={isOpen} navbar className="">
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/contact">
-                <Button class='' className="text-white">
-                  <h4>Contact</h4>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <Button color="" className="">
+                  <h4>CONTACT</h4>
                 </Button>
               </Link>
             </NavItem>
             <NavItem>
-              <Link to="/about">
-                <Button class='' className="text-white ">
-                  <h4>About</h4>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
+                <Button color="" className="">
+                  <h4>ABOUT</h4>
                 </Button>
               </Link>
             </NavItem>

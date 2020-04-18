@@ -10,16 +10,16 @@ body {
   color: black;
 }
 
-.nav {
-  background-color: black;
-
+nav {
   display: flex;
   flex-flow: row;
 }
 
+collapse {
+  align-content: center;
+}
+
 .nav li {
-  align-items: center;
-  min-width: 30px;
   text-align: center;
   color: rgb(0, 0, 0);
   padding: 10px 10px;
@@ -31,17 +31,19 @@ body {
 }
 
 .logo {
+  border-radius: 50%;
   height: 100px;
   width: 100px;
+  transition: 0.1s ease-out;
 }
 
 .logo:hover {
-  transform: scale(1.2);
-  transition: 0.18s ease-in-out;
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
 }
 
 .home-image {
-  background-image: url('./images/bg-masthead.jpg');
+  background-image: url('./images/water.jpeg');
   height: 120vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,13 +58,16 @@ body {
 .home-page-headline {
   position: absolute;
   text-align: center;
-  top: -700px;
+  max-height: 100%;
+  top: -800px;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
-  size: 100%;
-  font-size: 500%;
-  padding: 5%;
+  color: rgb(255, 255, 255);
+  padding: 1%;
+}
+
+.home-page-headline h1 {
+  font-size: 700%;
 }
 
 .home-page-ptag {
@@ -75,6 +80,17 @@ body {
   transform: translate(-50%, -50%);
   font-size: 1.5em;
   color: rgb(0, 0, 0);
+}
+
+.register-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  margin: 1%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
 }
 
 .button {
