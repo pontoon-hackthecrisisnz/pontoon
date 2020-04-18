@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { returnJob } from '../actions/jobs'
 
 class Register extends React.Component {
     constructor(props) {
@@ -8,9 +9,13 @@ class Register extends React.Component {
             name: '',
             region: '',
             town: '',
-            //lastJobs,
+            lastJob: '',
             minSalary: ''
         }
+    }
+
+    componentDidMount () {
+        this.props.dispatch(returnJob())
     }
 
     handleChange = (e) => {
@@ -27,13 +32,13 @@ class Register extends React.Component {
     render() {
         return(
             <div className="register">
-                <h1>{this.props.user.test}</h1>
+                <h1>{this.props.payload.test}</h1>
                 <form>
                     <input type='text' placeholder='name' name='name' onChange={this.handleChange} />
                     <input type='text' placeholder='region' name='region' onChange={this.handleChange} />
                     <input type='text' placeholder='town' name='town' onChange={this.handleChange} />
+                    <input type='text' placeholder='Latest Job' name='lastJob' onChange={this.handleChange} />
                     <input type='text' placeholder='minimum salary' name='minSalary' onChange={this.handleChange} />
-
                     <input  type="submit" onClick={this.handleSubmit} />
                 </form>
             </div>
@@ -42,7 +47,9 @@ class Register extends React.Component {
 }
 
 function mapStateToProps(state) {
-    return {user: state.user}
+    return {
+        payload: state.jobs
+    }
 }
 
 export default connect(mapStateToProps)(Register)
