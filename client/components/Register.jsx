@@ -25,7 +25,7 @@ class Register extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.dispatch(addUser(this.state))
-        this.props.dispatch(returnJob(this.state.town))
+        this.props.dispatch(returnJob(this.state.town, this.state.lastJob))
     }
 
     render() {
