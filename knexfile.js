@@ -16,9 +16,10 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+        host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
+        user : 'pontoon',
+        password : '8Kf8CWDvU8Gwf9z',
+        database : 'pontoon'
     },
     pool: {
       min: 2,
@@ -32,9 +33,10 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
+      user : 'pontoon',
+      password : '8Kf8CWDvU8Gwf9z',
+      database : 'pontoon'
     },
     pool: {
       min: 2,
