@@ -11,7 +11,8 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "postinstall": "webpack"
   },
   "babel": {
     "presets": [
@@ -41,9 +42,7 @@
   "homepage": "https://github.com/pontoon-hackthecrisisnz/pontoon#readme",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.5.0",
-    "pg": "^8.0.2"
-  },
-  "devDependencies": {
+    "pg": "^8.0.2",
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
@@ -71,5 +70,6 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "devDependencies": {}
 }
