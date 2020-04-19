@@ -79,10 +79,12 @@ class Job extends React.Component {
           })}
         </div>
         <div className="prospects">
+        <button className='hamburger' onClick={this.toggleSavedList}> ☰ </button>
           {this.state.listOpen ? (
             <div>
-              <button onClick={this.toggleSavedList}> Close Prospects </button>
-              <div className="SavedJobs">
+              <h1> hiii </h1>
+              <div className="sidenav">
+                <p className='closeButton' onClick={this.toggleSavedList}> ✘ </p>
                 {this.props.savedList.map((savedJob) => {
                   return (
                     <li>
@@ -100,7 +102,7 @@ class Job extends React.Component {
               </div>
             </div>
           ) : (
-            <button onClick={this.toggleSavedList}> View Prospects </button>
+              null
           )}
         </div>
       </React.Fragment>
