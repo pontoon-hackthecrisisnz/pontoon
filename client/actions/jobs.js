@@ -5,6 +5,8 @@ export const RECEIVED_JOB = 'RECEIVED_JOB';
 export const ERROR = 'ERROR';
 
 const URL = '/jobs';
+const likedJobs = []
+const dislikedJobs = []
 
 export const getJob = () => {
   return {
@@ -28,11 +30,14 @@ export const recievedErr = (err) => {
 
 //api export call to return the user for the front end.
 
-export function returnJob() {
+export function returnJob(town, source) {
   return (dispatch) => {
     dispatch(getJob());
+
+
+
     return request
-      .get(URL)
+      .get(URL + '/?town=' + town + '&source=' + source)
       .then((res) => {
         return res.body;
       })
