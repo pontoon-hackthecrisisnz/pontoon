@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="home-page-header">
       <div className="home-page-headline text-center">
-        <Link to='/register'><img src="/images/Pontoon.png" alt=""/></Link>
+        <Link to='/register'><img className='main-image-link' src="/images/Pontoon.png" alt=""/></Link>
       </div>
     </div>
   );
