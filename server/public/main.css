@@ -1,0 +1,301 @@
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  height: 100%;
+  font-family: 'Spartan';
+  color: black;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row;
+  background-color: #38b6ff;
+}
+
+collapse {
+  align-content: center;
+}
+
+.nav li {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;
+}
+
+.nav li:hover {
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.logo {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  transition: 0.1s ease-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
+
+.home-image {
+  background-image: url('./images/water.jpeg');
+  height: 120vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.home-page-header {
+  position: relative;
+}
+
+.home-page-headline {
+  position: absolute;
+  text-align: center;
+  max-height: 100%;
+  top: -1500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  padding: 1%;
+}
+
+.home-page-headline h1 {
+  font-size: 700%;
+}
+
+.home-page-ptag {
+  text-align: center;
+  position: absolute;
+  padding: 1%;
+  top: -900px;
+  left: 50%;
+  min-width: 350px;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+}
+
+.register-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  margin: 1%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
+}
+
+.button {
+  justify-content: space-around;
+  width: 30%;
+  min-width: 150px;
+  min-height: 60px;
+  background-color: rgb(32, 40, 41);
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  height: auto;
+  margin: 1%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+/*
+
+Start of Ethans CSS
+
+*/
+
+.register {
+  background-color: #2d3436;
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.jobCardContainer {
+  background-image: url(./images/water.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+
+.jobCard {
+  width: 55%;
+
+  padding: 20px;
+
+  background-color: #2d3436;
+
+  color: #f2f2f2;
+  text-align: center;
+
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.boldText {
+  font-style: italic;
+}
+
+@media (min-width: 500px) {
+  .boldText {
+    font-style: none;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.swipeButton {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 9px #999;
+}
+
+.yes {
+  background-color: #55efc4;
+  margin-right: 10px;
+}
+
+.yes:hover {
+  background-color: #00b894;
+}
+
+.yes:active {
+  background-color: #00b894;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.no {
+  background-color: #ff7675;
+  margin-left: 10px;
+}
+
+.no:hover {
+  background-color: #d63031;
+}
+
+.no:active {
+  background-color: #d63031;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/*
+
+End of Ethans CSS
+
+*/
+
+.prospects {
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin: auto 0;
+  padding: 10%;
+}
+
+/*
+
+MOBILE PATCHES
+
+*/
+
+.main-image-link {
+  margin-top: -900px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 200px;
+  left: 60px;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 100px;
+  
+  background: none;
+  border: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 400;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav li {
+  background-color: rgba(99, 110, 114, .7);
+}
+
+.sidenav li a {
+  list-style-type: none;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.sidenav li:hover {
+  color: #f1f1f1;
+}
+
+.closeButton {
+  color: #f1f1f1;
+  font-size: 60px;
+  text-align: right;
+  padding-right: 40px;
+}
