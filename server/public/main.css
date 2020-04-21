@@ -20,3 +20,34 @@ navbar-nav {
   justify-content: right;
   justify-items: right;
 }
+
+.search-button {
+  background-color: rgb(32, 40, 41);
+  border: none;
+  color: white;
+  padding: 30px 64px;
+  text-align: center;
+  display: inline-block;
+  font-size: 40px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 13px;
+}
+
+.search-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.search-container {
+  top: 40%;
+  margin: 20%;
+  min-width: 400px;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+}
