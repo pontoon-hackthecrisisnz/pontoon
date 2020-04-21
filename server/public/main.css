@@ -16,11 +16,6 @@ nav h1 {
   font-size: 250%;
 }
 
-navbar-nav {
-  justify-content: right;
-  justify-items: right;
-}
-
 .search-button {
   background-color: rgb(32, 40, 41);
   border: none;
@@ -50,4 +45,63 @@ navbar-nav {
   flex-flow: wrap;
   justify-content: center;
   align-content: center;
+}
+
+.form-container {
+  position: relative;
+  width: 40%;
+  min-width: 900px;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 15%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.job-form {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.job-form input {
+  width: 70%;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: none;
+  border-style: solid;
+  border-color: white;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+  box-shadow: 5px 10px 18px rgb(34, 34, 34);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 13px;
+  padding: 1%;
+}
+
+.job-form input:hover {
+  transition-duration: 0.4s;
+  background-color: white;
+}
+
+.submit-button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 40px;
+  margin: 10%;
+  min-width: 70%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 13px;
+  background-color: rgb(32, 40, 41);
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: rgb(32, 40, 41);
 }
