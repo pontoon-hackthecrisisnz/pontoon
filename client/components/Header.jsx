@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <Container className="">
-      <Row>
-        <Link to="/register">
-          <img className="" src="/images/Pontoon.png" alt="" />
-        </Link>
-      </Row>
-    </Container>
+    <>
+      <Navigation/>
+    </>
   );
 };
 

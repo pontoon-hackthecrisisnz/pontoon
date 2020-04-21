@@ -1,9 +1,22 @@
 body {
-  background-image: url("/images/water.jpeg");
+  background-image: url('/images/water.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: #464646;
- }
+  background-color: #555555;
+  height: 100%;
+  font-family: 'Spartan';
+  margin: 0;
+}
+
+nav h1 {
+  margin-top: 4%;
+  font-size: 250%;
+}
+
+navbar-nav {
+  justify-content: right;
+  justify-items: right;
+}
