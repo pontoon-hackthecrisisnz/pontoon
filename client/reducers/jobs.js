@@ -1,4 +1,5 @@
-import { GET_JOB, RECEIVED_JOB, ADD_LIKED_JOB, ERROR } from '../actions/jobs';
+import { GET_JOB, RECEIVED_JOB, ERROR } from '../actions/jobs';
+import { ADD_LIKED_JOB } from '../actions/savedList'
 
 const initialState = []
 

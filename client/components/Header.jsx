@@ -1,15 +1,16 @@
 import React from 'react';
-import { Container } from 'reactstrap';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <div className="home-page-header">
-      <div className="home-page-headline text-center">
-        <Link to='/register'><img className='main-image-link' src="/images/Pontoon.png" alt=""/></Link>
-      </div>
-    </div>
+    <Container className="">
+      <Row>
+        <Link to="/register">
+          <img className="" src="/images/Pontoon.png" alt="" />
+        </Link>
+      </Row>
+    </Container>
   );
 };
 

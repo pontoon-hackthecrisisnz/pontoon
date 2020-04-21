@@ -1,47 +1,35 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Button,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import React from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <>
-      <Navbar className="nav" light expand="md">
-        <NavbarBrand>
-          <Link to="/">
-            <img className="logo" src="/images/Pontoon.png" alt="" />
-          </Link>
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar className="">
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Link to="/contact" style={{ textDecoration: 'none' }}>
-                <Button color="" className="">
-                  <h4>Contact</h4>
-                </Button>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to="/about" style={{ textDecoration: 'none' }}>
-                <Button color="" className="">
-                  <h4>About</h4>
-                </Button>
-              </Link>
-            </NavItem>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#">Pontoon</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
-        </Collapse>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </>
   );

@@ -1,4 +1,3 @@
-import request from 'superagent';
 
 export const ADD_USER = 'ADD_USER';
 

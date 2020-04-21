@@ -50,7 +50,7 @@ class Register extends React.Component {
     render() {
         return(
             <React.Fragment>
-            <div className="register">
+            <div className="">
 
                 <form>
                     <input type='text' placeholder='Region' name='town' onChange={this.handleChange} />

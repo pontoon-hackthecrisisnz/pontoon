@@ -17,9 +17,8 @@ class SavedJob extends React.Component {
 
         return(
             <React.Fragment>
-                <div className="SavedJobs">
+                <div className="">
                     {this.props.savedList.map( savedJob => {
-                        
                         return (<li> You liked: {savedJob.ad_title} </li>)
                     })}
                 </div>

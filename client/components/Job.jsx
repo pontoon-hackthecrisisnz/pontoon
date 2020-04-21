@@ -39,31 +39,31 @@ class Job extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="jobCardContainer">
+        <div className="">
           {this.props.jobs.map((job, i) => {
             if (i == this.state.currentJob) {
               return (
                 <React.Fragment key={i}>
-                  <div className="jobCard">
-                    <div className="jobInfo">
-                      <h3> {job.ad_title} </h3>
-                      <p className="boldText"> {job.company} </p>
-                      <p className="boldText"> {job.contract_type} </p>
-                      <p> {job.ad_description} </p>
-                      <p> {job.ad_region} </p>
+                  <div className="">
+                    <div className="">
+                      <h3> {job.title} </h3>
+                      <p className=""> {job.company} </p>
+                      <p className=""> {job.contract_type} </p>
+                      <p> {job.description} </p>
+                      <p> {job.region} </p>
                       <p> {job.town} </p>
                     </div>
 
-                    <div className="buttonWrapper">
+                    <div className="">
                       <div
-                        className="swipeButton yes"
+                        className=""
                         onClick={() => this.likeJob(job)}
                       >
                         {' '}
                         ✓{' '}
                       </div>
                       <div
-                        className="swipeButton no"
+                        className=""
                         onClick={this.handleClick}
                       >
                         {' '}
@@ -78,20 +78,26 @@ class Job extends React.Component {
             }
           })}
         </div>
-        <div className="prospects">
-        <button className='hamburger' onClick={this.toggleSavedList}> ☰ </button>
+        <div className="">
+          <button className="" onClick={this.toggleSavedList}>
+            {' '}
+            ☰{' '}
+          </button>
           {this.state.listOpen ? (
             <div>
               <h1> hiii </h1>
-              <div className="sidenav">
-                <p className='closeButton' onClick={this.toggleSavedList}> ✘ </p>
+              <div className="">
+                <p className="" onClick={this.toggleSavedList}>
+                  {' '}
+                  ✘{' '}
+                </p>
                 {this.props.savedList.map((savedJob) => {
                   return (
                     <li>
                       {' '}
                       <a href={savedJob.link}>
                         {' '}
-                        {savedJob.ad_title} from{' '}
+                        {savedJob.title} from{' '}
                         {savedJob.company
                           ? savedJob.company
                           : 'an unlisted company.'}{' '}
@@ -101,9 +107,7 @@ class Job extends React.Component {
                 })}
               </div>
             </div>
-          ) : (
-              null
-          )}
+          ) : null}
         </div>
       </React.Fragment>
     );

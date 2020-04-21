@@ -3,23 +3,19 @@
 module.exports = {
 
   development: {
-    client: 'pg',
+    client: 'sqlite3',
     connection: {
-        host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
-        user : 'pontoon',
-        password : '8Kf8CWDvU8Gwf9z',
-        database : 'pontoon'
-    }
-    // useNullAsDefault: true
+      filename: './dev.sqlite3'
+    },
+    useNullAsDefault: true,
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
-      user : 'pontoon',
-      password : '8Kf8CWDvU8Gwf9z',
-      database : 'pontoon'
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
@@ -33,10 +29,9 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      host : "pontoon.cwtgj6dm8djy.ap-southeast-2.rds.amazonaws.com",
-      user : 'pontoon',
-      password : '8Kf8CWDvU8Gwf9z',
-      database : 'pontoon'
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
