@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
 
   db.getJobs()
     .then(jobs => {
-      console.log(jobs) 
       res.json(jobs);
     })
     .catch((err) => {
