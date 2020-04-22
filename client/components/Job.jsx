@@ -39,14 +39,14 @@ class Job extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="">
+        <div className="job-option-container">
           {this.props.jobs.map((job, i) => {
             if (i == this.state.currentJob) {
               return (
                 <React.Fragment key={i}>
-                  <div className="">
+                  <div className="job-form">
                     <div className="">
-                      <h3> {job.title} </h3>
+                      <h2> {job.title} </h2>
                       <p className=""> {job.company} </p>
                       <p className=""> {job.contract_type} </p>
                       <p> {job.description} </p>
@@ -55,17 +55,11 @@ class Job extends React.Component {
                     </div>
 
                     <div className="">
-                      <div
-                        className=""
-                        onClick={() => this.likeJob(job)}
-                      >
+                      <div className="" onClick={() => this.likeJob(job)}>
                         {' '}
                         ✓{' '}
                       </div>
-                      <div
-                        className=""
-                        onClick={this.handleClick}
-                      >
+                      <div className="" onClick={this.handleClick}>
                         {' '}
                         ✘{' '}
                       </div>
