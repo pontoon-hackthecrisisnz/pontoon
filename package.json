@@ -52,7 +52,7 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.4.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest": "^24.7.1",
     "knex": "^0.20.15",
     "nodemon": "^2.0.3",
